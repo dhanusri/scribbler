@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+<style>
+   .maintitle{
+    font-family: 'Montez', cursive;
+    color: blue;
+    font-size: 36px;
+}
+p{
+    font-family: 'Ubuntu Mono',cursive;
+    margin-block: auto;
+
+}
+#signin{
+    position: absolute;
+    top: 24px;
+    right: 50px;
+    background: blue;
+    color:white;
+    border: white;
+    padding: 9px;
+    text-align: center;
+    
+
+}
+#signup{
+    position: absolute;
+    top: 24px;
+    right: 120px;
+    background: blue;
+    color:white;
+    border: white;
+    padding: 9px;
+    text-align: center;
+}
+label, input {
+    display: block;
+    margin-bottom: 12px;
+    width: 93%;
+    padding: 5px;
+    margin-top: -4px;
+
+}
+input{
+    background: #f1f1f1;
+    border: none;
+
+}
+
+label {
+    margin-bottom: 4px;
+}
+
+form{
+    width: 100%;
+    padding: 15px;
+    margin: -12px 10px -10px -16px;
+    border: 10px;
+}
+.modal,.modelsign ,.modalregister{
+    display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content,.modal-content-signin,.modal-content-register {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 21%;
+    justify-content: space-between;
+    height: 56%;
+}
+
+.close ,.closesignup,.closereg{
+  color: closesignup#aaaaaa;
+  float: right;
+  font-size: 28px;
+}
+
+.signupform,.signinform,.signupformre{
+    background: green;
+    font-size: 59%;
+    color: white;
+    width: 93%;
+    padding: 8px;
+    border: none;
+    font-size: 14px;
+    margin-top: 20px;
+
+}
+
+.modal-header,.modal-header-signin,.modal-header-register {
+  padding: 2px 16px;
+}
+
+.underline{
+    border-bottom: 2px solid currentColor;
+    margin-inline-start: 0cm;
+    margin-left: -19px;
+    padding: 11px;
+    font-family: 'Times New Roman';
+    font-weight: lighter;
+}
+
+.center {
+   margin: auto;
+   width: 50%;
+   padding: 10px;
+}
+
+.button {
+  margin:48% 61% 10% 10%;;
+  background-color: #0066FF;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+        <div class="modal-header">
+      <span class="close">&times;</span>
+      <p class="underline">Get Started</p></h2>
+    </div>
+          <form>
+            <label class="labelText">Name</label>     
+            <input type="text"  placeholder="Enter your name" id="Name" required>
+            <label class="labelText">Username</label>
+            <input type="text" placeholder="Enter your username" id="Username" required>
+            <label class="labelText">Password</label>
+            <input type="password" placeholder="Enter your password" id="password" required>
+            <label class="labelText">Confirmation Password</label>
+            <input type="password" placeholder="Re-enter your password" id="confirmpassword" required> 
+            <button class="signupform">Sign Up</button>
+          </form>
+        </div>
+        </div>
+        <div id="mySignInModel" class="modelsign">
+            <div class="modal-content-signin">
+            <div class="modal-header-signin">
+          <span class="closesignup">&times;</span>
+          <p class="underline">Welcome Back!</p></h2>
+        </div>
+              <form>
+                  <label class="username" >Username</label>
+                <input type="text" placeholder="Enter your username" id="Username" required>
+                <label class="labelText">Password</label>
+                <input type="password" placeholder="Enter your password" id="password" required>
+                <button class="signinform" >Sign In</button>
+                <h2 class="notamember">Not a member?</h2>
+                <a href="#myModalregister" class="register" id="reg" target="_self" data-toggle="modal" >Register!</a>
+</form>
+
+            </div>
+            </div>
+           <!---- <div id="myModalregister" class="modalregister">
+                <div class="modal-content-register">
+                <div class="modal-header-register">
+              <span class="closereg">&times;</span>
+              <p class="underline">Get Started</p></h2>
+            </div>
+                  <form>
+                    <label class="labelTextre">Name</label>     
+                    <input type="text"  placeholder="Enter your name" id="Namere" required>
+                    <label class="labelText"re>Username</label>
+                    <input type="text" placeholder="Enter your username" id="Usernamere" required>
+                    <label class="labelTextre">Password</label>
+                    <input type="password" placeholder="Enter your password" id="passwordre" required>
+                    <label class="labelTextre">Confirmation Password</label>
+                    <input type="password" placeholder="Re-enter your password" id="confirmpasswordre" required> 
+                  <button class="signupformreg">Sign Up</button>
+                  </form>
+
+                </div>
+                </div>  --> 
+<!-- Navigation -->
+  <p class="maintitle" >ScriBBler</p>
+  <p>Explore, Imagine, Create</p>
+      <button id="signup" onclick="signUp(id)">Sign Up</button>
+      <button id="signin">Sign In</button>
+      <div id="check">
+      <div align="center">
+        <button >All Posts</button>
+        <br>
+      <button class>Create Posts</button>
+      </div>
+      <script src="../scripts/index.js"></script>
+</body>
+<script>
+    // Get the button that opens the modal
+    function signUp(button){
+var btn = document.getElementById(button);
+console.log(btn+"button=============");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+var modal=document.getElementById("myModal");
+console.log("modal==="+JSON.stringify(modal));
+btn.onclick = function() {
+    console.log("onclick");
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+    }
+    //var modaltofetch=document.getElementById("myModalregister");
+    var btnForReg=document.getElementById("reg");
+    var modelclose=document.getElementById("myModal");
+    var modelsignup=document.getElementById("mySignInModel");
+    var spanForRegister = document.getElementsByClassName("close")[0];
+    btnForReg.onclick=function(){
+        modelsignup.style.display="none";   
+        console.log(modelsignup);
+        modelclose.style.display="block";
+
+    }
+spanForRegister.onclick=function(){
+    console.log("close reg");
+    modelclose.style.display="none";
+}
+
+
+
+    console.log("inside displayme");
+var btnForSignIn=document.getElementById("signin");
+console.log("btnforsignin==="+btnForSignIn);
+var spanSignUp=document.getElementsByClassName("closesignup")[0];
+var modelsign=document.getElementById("mySignInModel");
+btnForSignIn.onclick=function(){
+    modelsign.style.display="block";
+}
+spanSignUp.onclick=function(){
+    modelsign.style.display="none";
+}
+
+
+</script>
+</html>
